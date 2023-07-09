@@ -1,24 +1,26 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# RoR Crud
+<table>
+<tr>
+<td>
+  This web application is a basic CRUD using Ruby On Rails.
+</td>
+</tr>
+</table>
 
-Things you may want to cover:
+## Built with 
 
-* Ruby version
+![RubyOnRails](https://img.shields.io/badge/Ruby&nbsp;On&nbsp;Rails-16181D.svg?style=for-the-badge&logo=rubyonrails&logoColor=red)
 
-* System dependencies
+## dependencies
 
-* Configuration
+- Tailwind: https://tailwindcss.com/
 
-* Database creation
+## Build Setup
 
-* Database initialization
+```bash
+# Install gems
+$ bundle
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Serve the app
+$ rails s
