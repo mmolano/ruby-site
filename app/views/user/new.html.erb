@@ -1,0 +1,30 @@
+<h1 class="text-4xl font-bold">Signup form</h1>
+<%= form_with model: @user, url: signup_path, class: "flex flex-col w-full" do |form| %>
+  <% if form.object.errors.any? %>
+    <div class="m-2 p-5 w-full bg-red-500">
+      <ul class="list-disc">
+        <% form.object.errors.full_messages.each do |message| %>
+          <li class="ml-3 text-red-900 my-1">
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="m-2 flex flex-col">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "border-2 border-black w-52" %>
+  </div>
+  <div class="m-2 flex flex-col">
+    <%= form.label :password %>
+    <%= form.password_field :password, class: "border-2 border-black w-52" %>
+  </div>
+  <div class="m-2 flex flex-col">
+    <%= form.label :password_confirmation, "Confirm password" %>
+    <%= form.password_field :password_confirmation, class: "border-2 border-black w-52"%>
+  </div>
+  <%= link_to 'Forgot your password?', password_reset_path %>
+  <div class="m-2">
+    <%= form.submit "Sign up", class: "border-2 border-black p-3" %>
+  </div>
+<% end %>

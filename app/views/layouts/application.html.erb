@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
-    <%= yield %>
+    <%= render partial: "shared/navbar" %>
+    <div class="container max-w-7xl flex flex-col justify-center mt-2 mx-auto">
+     <%= render partial: "shared/flash" %>
+      <%= yield %>
+    </div>
   </body>
 </html>

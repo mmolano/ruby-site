@@ -1,0 +1,10 @@
+<h1 class="text-4xl font-bold">Reset your password</h1>
+<%= form_with url: password_reset_path, class: "flex flex-col w-full" do |form| %>
+  <div class="m-2 flex flex-col">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "border-2 border-black w-52 p-2", placeholder: "Email@mail.com" %>
+  </div>
+  <div class="m-2">
+    <%= form.submit "Reset Password", class: "border-2 border-black p-3" %>
+  </div>
+<% end %>

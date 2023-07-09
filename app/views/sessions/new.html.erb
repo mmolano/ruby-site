@@ -1,0 +1,15 @@
+<h1 class="text-4xl font-bold">Login form</h1>
+<%= form_with model: @sessions, url: login_path, class: "flex flex-col w-full" do |form| %>
+  <div class="m-2 flex flex-col">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "border-2 border-black w-52" %>
+  </div>
+  <div class="m-2 flex flex-col">
+    <%= form.label :password %>
+    <%= form.password_field :password, class: "border-2 border-black w-52" %>
+  </div>
+  <%= link_to 'Forgot your password?', password_reset_path %>
+  <div class="m-2">
+    <%= form.submit "Log in", class: "border-2 border-black p-3" %>
+  </div>
+<% end %>
